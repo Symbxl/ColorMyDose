@@ -125,7 +125,7 @@ function SiteFooter() {
 
 function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-ink px-5 pb-16 pt-14 text-paper sm:px-8 sm:pb-20 sm:pt-16 lg:pt-20">
+    <section className="relative isolate flex flex-col justify-center overflow-hidden bg-ink px-5 pb-16 pt-14 text-paper sm:px-8 sm:pb-20 sm:pt-16 lg:min-h-[85svh] lg:pt-20">
       {/* Depth on the ink ground — steel only, so no glow reads as a dose color. */}
       <div
         aria-hidden="true"
@@ -375,7 +375,7 @@ function WhoWeServe() {
       <div className="mt-10 grid gap-x-8 gap-y-10 md:grid-cols-2">
         {AUDIENCES.map((a) => (
           <div key={a.title}>
-            <BenefitCheck />
+            <ColorRule className="w-14" />
             <p className="type-overline mt-4 text-steel">{a.tag}</p>
             <Heading2 className="mt-2">{a.title}</Heading2>
             <Body className="mt-2 text-[0.95rem] text-ink/85">{a.body}</Body>

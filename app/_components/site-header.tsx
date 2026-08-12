@@ -149,7 +149,7 @@ function NavLink({
       href={href}
       onClick={onClick}
       aria-current={current ? "true" : undefined}
-      className={`type-nav flex items-center rounded-[5px] px-3.5 py-2.5 transition-colors ${
+      className={`type-nav flex items-center rounded-[5px] px-2.5 py-2 text-[0.6875rem] transition-colors ${
         current ? "bg-mist text-ink" : "text-steel hover:bg-mist/70 hover:text-ink"
       }`}
     >
