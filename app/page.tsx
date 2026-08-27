@@ -14,7 +14,6 @@ import {
 } from "./_components/brand";
 import {
   DoseSticker,
-  DualChip,
   DualSticker,
 } from "./_components/product";
 import { HeroVideo } from "./_components/hero-video";
@@ -165,11 +164,21 @@ function Hero() {
             </div>
           </div>
 
-          <figure>
-            <HeroVideo />
+          <figure className="mx-auto w-full max-w-[24rem]">
+            <div className="overflow-hidden rounded-lg bg-paper shadow-[0_1px_2px_rgba(0,0,0,0.18),0_28px_56px_-24px_rgba(0,0,0,0.5)]">
+              <Image
+                src="/2.JPG"
+                alt="A pharmacist in a white coat stands before the dispensing shelves holding out a seven-day organizer, its four rows running yellow Morning, red Noon, green Evening, and purple Bedtime."
+                width={1200}
+                height={1600}
+                preload
+                sizes="(min-width: 1024px) 24rem, 100vw"
+                className="block h-auto w-full"
+              />
+            </div>
             <figcaption className="type-caption mt-4 text-center text-paper/60">
-              The bottle takes the color of its dosing time — the match is the
-              verification.
+              Four rows, four dosing times — the same color code the bottle
+              wears.
             </figcaption>
           </figure>
         </div>
@@ -225,9 +234,9 @@ function System() {
         ))}
       </div>
 
-      <div className="mt-6 flex flex-wrap items-center gap-3">
-        <DualChip />
-        <p className="type-caption text-steel">
+      <div className="mt-8 flex flex-col items-center gap-4 text-center sm:mt-6 sm:flex-row sm:flex-wrap sm:gap-3 sm:text-left">
+        <DualSticker className="shrink-0 [zoom:1.4] sm:[zoom:1]" />
+        <p className="type-caption max-w-[26rem] text-steel sm:max-w-none">
           Twice-daily medications carry one dual-color label — morning and
           bedtime on the same sticker.
         </p>
@@ -384,14 +393,15 @@ function WhoWeServe() {
       </div>
 
       <div className="mt-12 grid overflow-hidden rounded-lg border border-ink/10 bg-paper md:grid-cols-2">
-        <div className="flex min-h-[14rem] flex-col items-center justify-center gap-7 border-b border-ink/10 bg-mist/60 px-6 py-10 md:min-h-0 md:border-b-0 md:border-r">
-          <Lockup size={26} />
-          <div className="grid grid-cols-2 justify-items-center gap-2.5">
-            {TIMES.map((t) => (
-              <DoseSticker key={t.key} time={t} />
-            ))}
-            <DualSticker className="col-span-2" />
-          </div>
+        <div className="min-h-[14rem] border-b border-ink/10 bg-mist/60 md:min-h-0 md:border-b-0 md:border-r">
+          <Image
+            src="/5.JPEG"
+            alt="A ColorMyDose kit on a counter: a seven-day organizer with yellow Morning, orange Noon, green Evening, and purple Bedtime rows labeled Monday through Sunday, flanked by prescription bottles wearing matching color-coded caps."
+            width={3024}
+            height={1930}
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="h-full w-full object-cover"
+          />
         </div>
         <div className="space-y-6 p-6 sm:p-8">
           {SHARED_KIT.map((k) => (
@@ -428,7 +438,7 @@ function PathwayCard({
 }) {
   return (
     <div className="overflow-hidden rounded-lg border border-ink/10 bg-paper">
-      <div className="flex h-[13rem] items-center justify-center overflow-hidden border-b border-ink/10 bg-mist/60">
+      <div className="flex h-[18rem] items-center justify-center overflow-hidden border-b border-ink/10 bg-mist/60 p-5">
         {children}
       </div>
       <div className="p-6 sm:p-8">
@@ -472,11 +482,12 @@ function GetStarted() {
           body="The dose color prints directly on the prescription label through your dispensing software — compatible with major pharmacy systems."
         >
           <Image
-            src="/pic.jpg"
-            alt="A prescription bottle wearing the purple Bedtime label — QHS, bedtime & BID second dose"
-            width={1024}
-            height={348}
-            className="h-full w-full object-cover"
+            src="/7.png"
+            alt="A seven-day organizer photographed from above, its four rows running yellow Morning, red Noon, green Evening, and purple Bedtime, each compartment labeled Monday through Sunday."
+            width={964}
+            height={675}
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="-m-5 h-[calc(100%+2.5rem)] w-[calc(100%+2.5rem)] max-w-none object-contain"
           />
         </PathwayCard>
       </div>
