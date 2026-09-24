@@ -481,12 +481,12 @@ function GetStarted() {
           body="The dose color prints directly on the prescription label through your dispensing software — compatible with major pharmacy systems."
         >
           <Image
-            src="/image_high.jpg"
-            alt="A ColorMyDose kit on a counter: a clear case badged with the ColorMyDose mark and its four dose icons, a seven-day organizer resting on top with yellow Morning, red Noon, green Evening, and purple Bedtime rows, and prescription bottles around it wearing matching color-coded caps."
-            width={4527}
-            height={3018}
+            src="/print.png"
+            alt="Prescription bottles on a pharmacy counter, each label printed with a colored dose band — yellow Morning, red Noon, green Evening, purple Bedtime — beside matching color-coded caps, a seven-day organizer, and the ColorMyDose kit case."
+            width={1024}
+            height={1536}
             sizes="(min-width: 768px) 50vw, 100vw"
-            className="-m-5 h-[calc(100%+2.5rem)] w-[calc(100%+2.5rem)] max-w-none object-contain"
+            className="-m-5 h-[calc(100%+2.5rem)] w-[calc(100%+2.5rem)] max-w-none object-cover"
           />
         </PathwayCard>
       </div>
