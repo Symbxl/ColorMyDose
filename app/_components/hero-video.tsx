@@ -2,8 +2,35 @@
 
 import { useRef, useState } from "react";
 
+const FRAME =
+  "relative overflow-hidden rounded-lg bg-paper shadow-[0_1px_2px_rgba(0,0,0,0.18),0_28px_56px_-24px_rgba(0,0,0,0.5)]";
+
 /**
- * The hero film — the system doing its one thing, on a 16-second loop. The
+ * The hero film — a pharmacist introducing the system to camera. It carries
+ * narration rather than being an ambient loop, so it waits for the visitor to
+ * press play, and loads only its metadata until they do.
+ */
+export function HeroFilm({ className }: { className?: string }) {
+  return (
+    <div className={`${FRAME} ${className ?? ""}`}>
+      <video
+        className="block h-auto w-full"
+        width={1920}
+        height={1080}
+        controls
+        playsInline
+        preload="metadata"
+        poster="/hero-poster.jpg"
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+}
+
+/**
+ * The match demo — the system doing its one thing, on a 16-second loop. The
  * bottle label cycles through the four dose colors and the matching organizer
  * row answers. Autoplays muted and inline and loops continuously; carries its
  * own pause control since it runs longer than five seconds.
@@ -21,7 +48,7 @@ export function HeroVideo({ className }: { className?: string }) {
 
   return (
     <div
-      className={`relative overflow-hidden rounded-lg bg-paper shadow-[0_1px_2px_rgba(0,0,0,0.18),0_28px_56px_-24px_rgba(0,0,0,0.5)] ${className ?? ""}`}
+      className={`${FRAME} ${className ?? ""}`}
     >
       <video
         ref={videoRef}

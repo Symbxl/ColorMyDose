@@ -16,7 +16,7 @@ import {
   DoseSticker,
   DualSticker,
 } from "./_components/product";
-import { HeroVideo } from "./_components/hero-video";
+import { HeroFilm } from "./_components/hero-video";
 import { NAV } from "./_components/nav";
 import { SiteHeader } from "./_components/site-header";
 import { TalkToSales } from "./_components/talk-to-sales";
@@ -164,21 +164,10 @@ function Hero() {
             </div>
           </div>
 
-          <figure className="mx-auto w-full max-w-[24rem]">
-            <div className="overflow-hidden rounded-lg bg-paper shadow-[0_1px_2px_rgba(0,0,0,0.18),0_28px_56px_-24px_rgba(0,0,0,0.5)]">
-              <Image
-                src="/2.JPG"
-                alt="A pharmacist in a white coat stands before the dispensing shelves holding out a seven-day organizer, its four rows running yellow Morning, red Noon, green Evening, and purple Bedtime."
-                width={1200}
-                height={1600}
-                preload
-                sizes="(min-width: 1024px) 24rem, 100vw"
-                className="block h-auto w-full"
-              />
-            </div>
+          <figure className="mx-auto w-full max-w-[34rem]">
+            <HeroFilm />
             <figcaption className="type-caption mt-4 text-center text-paper/60">
-              Four rows, four dosing times — the same color code the bottle
-              wears.
+              A pharmacist walks through the color code in under two minutes.
             </figcaption>
           </figure>
         </div>
@@ -246,11 +235,21 @@ function System() {
         <div>
           <Heading2>See the match for yourself</Heading2>
           <Body className="mt-3 text-[0.95rem] text-ink/85">
-            Press play — the bottle&rsquo;s label takes the color of its
-            dosing time, and the matching organizer row answers.
+            Every cap wears its dosing time — a single color for a once-daily
+            medication, a split cap for one taken more than once — so the
+            bottle and its organizer row always agree.
           </Body>
         </div>
-        <HeroVideo className="border border-ink/10" />
+        <div className="overflow-hidden rounded-lg border border-ink/10 bg-paper shadow-[0_1px_2px_rgba(0,0,0,0.18),0_28px_56px_-24px_rgba(0,0,0,0.5)]">
+          <Image
+            src="/match.jpg"
+            alt="Prescription bottles on a counter surrounded by their caps: single-color caps in yellow Morning, red Noon, green Evening, and purple Bedtime, alongside split caps that pair two colors for medications taken more than once a day."
+            width={4608}
+            height={3072}
+            sizes="(min-width: 1024px) 40rem, 100vw"
+            className="block h-auto w-full"
+          />
+        </div>
       </div>
     </Section>
   );
@@ -395,10 +394,10 @@ function WhoWeServe() {
       <div className="mt-12 grid overflow-hidden rounded-lg border border-ink/10 bg-paper md:grid-cols-2">
         <div className="min-h-[14rem] border-b border-ink/10 bg-mist/60 md:min-h-0 md:border-b-0 md:border-r">
           <Image
-            src="/5.JPEG"
-            alt="A ColorMyDose kit on a counter: a seven-day organizer with yellow Morning, orange Noon, green Evening, and purple Bedtime rows labeled Monday through Sunday, flanked by prescription bottles wearing matching color-coded caps."
-            width={3024}
-            height={1930}
+            src="/5.png"
+            alt="A ColorMyDose kit on a counter: a seven-day organizer with yellow Morning, red Noon, green Evening, and purple Bedtime rows labeled Monday through Sunday, beside prescription bottles whose caps and label bands carry the matching colors."
+            width={1536}
+            height={1024}
             sizes="(min-width: 768px) 50vw, 100vw"
             className="h-full w-full object-cover"
           />
@@ -482,10 +481,10 @@ function GetStarted() {
           body="The dose color prints directly on the prescription label through your dispensing software — compatible with major pharmacy systems."
         >
           <Image
-            src="/7.png"
-            alt="A seven-day organizer photographed from above, its four rows running yellow Morning, red Noon, green Evening, and purple Bedtime, each compartment labeled Monday through Sunday."
-            width={964}
-            height={675}
+            src="/image_high.jpg"
+            alt="A ColorMyDose kit on a counter: a clear case badged with the ColorMyDose mark and its four dose icons, a seven-day organizer resting on top with yellow Morning, red Noon, green Evening, and purple Bedtime rows, and prescription bottles around it wearing matching color-coded caps."
+            width={4527}
+            height={3018}
             sizes="(min-width: 768px) 50vw, 100vw"
             className="-m-5 h-[calc(100%+2.5rem)] w-[calc(100%+2.5rem)] max-w-none object-contain"
           />
