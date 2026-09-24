@@ -22,7 +22,7 @@ export function HeroFilm({ className }: { className?: string }) {
         preload="metadata"
         poster="/hero-poster.jpg"
       >
-        <source src="/hero.mp4" type="video/mp4" />
+        <source src="/testimonial.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
