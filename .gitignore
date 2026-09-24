@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# uncompressed video masters (too large for GitHub; web versions are committed)
+/public/*-original.*
